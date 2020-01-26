@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Перемещение мышки</title>
+</head>
+<body>
+  <h1 id= "Heading"> Mouse RUUUUUN !!!  </h1>
+
+  <script src="Js/jquery-3.4.1.min.js"> </script>
+  <script type="text/javascript">
+
+    var offset = 0;
+    var direction = "Right";
+
+
+    $("#Heading").offset({left: offset,
+                          top: offset});
+$("html").click(clearTimeout(moveHeading));
+
+    function moveHeading() {
+      if (direction === "Right") {
+          $("#Heading").offset({left: offset});
+          offset++;
+          if (offset > 200) {
+            offset = 0;
+            direction = "Down";
+          }
+      } else if (direction === "Down") {
+        $("#Heading").offset({top: offset});
+        offset++;
+        if (offset > 200) {
+          offset = 200;
+          direction = "left";}
+      } else if (direction === "left") {
+        $("#Heading").offset({left: offset});
+        offset--;
+        if (offset < 0) {
+          offset = 200;
+          direction = "up";
+        };
+    } else if (direction === "up") {
+      $("#Heading").offset({top: offset});
+      offset--;
+      if (offset < 0) {
+        offset = 0;
+        direction = "Right";
+      };
+    };
+};
+  setInterval(moveHeading,10);
+
+
+
+  </script>
+</body>
+</html>
