@@ -1,3 +1,7 @@
+class SwapiServise {
+
+  _apiBase = 'https://swapi.dev/api'
+
   async getResourse(url){
      const res = await fetch(`${this._apiBase}${url}`)
      if(!res.ok){
@@ -6,6 +10,7 @@
 
      return await res.json()
   }
+
  async getAllPeople(){
     const resp = await this.getResourse(`/people/`)
     return  resp.results
@@ -32,3 +37,19 @@
   getPlanet(id){
     return this.getResourse(`/starships/${id}`)
   }
+
+}
+
+
+
+const servise = new SwapiServise
+servise.getPersone(3)
+  .then(people => console.log(people.name))
+
+
+  servise.getAllPlanets()
+      .then(ships => {
+        ships.forEach(ship => {
+          console.log(ship.name)
+        });
+      })
