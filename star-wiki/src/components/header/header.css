@@ -1,6 +1,7 @@
 .header{
     display: flex;
     align-items: center;
+    margin-top: 15px;
 }
 
 .header ul{
@@ -11,7 +12,6 @@
 
 .header li {
     margin: 5px 15px;
-    color: ;
     list-style: none;
     font-size: 17px;
     color: rgb(7, 145, 76);
