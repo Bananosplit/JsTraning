@@ -34,7 +34,7 @@ export default class  SwapiServise {
       return  resp.results
     }
   
-    getPlanet(id){
+    getStarship(id){
       return this.getResourse(`/starships/${id}`)
     }
   
