@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './random-planet.css'
 
-export default function RandomPlanet() {
+export default class RandomPlanet extends Component {
 
-    return (
+    state = {
+        name: null,
+        population: null,
+        rotationPeriod: null,
+        diametr: null
+    }
+
+    render() {
+
+        const {name ,population, rotationPeriod, diametr} = this.state
+
+        return(
         <div className="random-planet">
 
             <div className="planet-logo">
@@ -11,27 +22,28 @@ export default function RandomPlanet() {
             </div>
 
             <div className='random-planet-details'>
-                <div className="name-planet"> <h3>Name planet</h3></div>
+                <div className="name-planet"> <h3> {name} </h3></div>
                 <div className="feature-list">
                     <ul>
                         <li className='feature-list-item'>
-                            <span>Population</span>
-                            <span>3000000</span>
+                            <span> Population </span>
+                            <span> {population} </span>
                         </li>
 
                         <li className='feature-list-item'>
-                            <span>Rotation Period</span>
-                            <span>43</span>
+                            <span> RotationPeriod </span>
+                            <span> {rotationPeriod} </span>
                         </li>
 
                         <li className='feature-list-item'>
-                            <span>Diameter</span>
-                            <span>100</span>
+                            <span> Diametr </span>
+                            <span> {diametr} </span>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+        )
 
-    )
+    }
 }
