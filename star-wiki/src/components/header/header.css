@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.header ul{
+    display: flex;
+    align-items: center;
+
+}
+
+.header li {
+    margin: 5px 15px;
+    list-style: none;
+    font-size: 17px;
+    color: rgb(7, 145, 76);
+}
+
+.header li:hover {
+    cursor: pointer;
+    color: #fff;
+}

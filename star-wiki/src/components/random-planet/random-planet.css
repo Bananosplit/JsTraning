@@ -1,0 +1,33 @@
+.random-planet{
+    margin-top: 20px;
+    display: flex;
+    background: rgb(56, 55, 55);
+    height: 300px;
+    align-items: center;
+    width: 100%;
+    justify-content:flex-start;
+    border-radius: 5px;
+}
+
+.planet-logo img{
+
+    width: 230px;
+    height: 230px;
+    border-radius: 10px;
+    margin: 0 80px;
+
+}
+
+
+.feature-list-item{
+    list-style: none;
+    border-top: 1px solid rgb(168, 163, 163);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.name-planet{
+    margin-bottom: 20px;
+}

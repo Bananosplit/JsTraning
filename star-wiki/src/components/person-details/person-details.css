@@ -1,0 +1,27 @@
+
+.person-details {
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: row;
+    padding: 1rem;
+    width: 45%;
+    border-radius: 15px;
+    align-items: center;
+    background: rgb(56, 55, 55)!important;
+  }
+  
+.person-image {
+    width: 30%;
+    border-radius: 10px;
+    margin: 0 15px
+  }
+  
+  .person-details .list-group-item {
+    padding: .25rem;
+    background: rgb(56, 55, 55)!important;
+    border-bottom: 1px solid #fff !important;
+  }
+  
+  .person-details .list-group-item .term{
+    margin-right: .5rem;
+  }
