@@ -9,6 +9,16 @@ import './app.css'
 
 export default class App extends Component {
 
+    state = {
+        selectedPerson: null
+    }
+
+    onPersonSelected = (id) => {
+        this.setState({
+            selectedPerson:id
+        })
+    }
+
     render(){
 
         return (
@@ -17,8 +27,8 @@ export default class App extends Component {
                 <Header/>
                 <RandomPlanet/>
                 <div className = "star-list-wrap">
-                    <ListItem/>
-                    <PersonDetails/>
+                    <ListItem onItemSelected = {this.onPersonSelected}/>
+                    <PersonDetails personId  = {this.state.selectedPerson}/>
                 </div>
             </div>
             </div>
