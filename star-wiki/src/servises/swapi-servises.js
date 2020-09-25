@@ -51,7 +51,7 @@ export default class  SwapiServise {
       return id
     }
 
-    _planetInfoTransorm(planet) {
+    _planetInfoTransorm = (planet) => {
       return {
         id: this.extractId(planet),
         name: planet.name,
@@ -61,17 +61,17 @@ export default class  SwapiServise {
       }
     }
 
-    _peopleInfoTransform(people){
+    _peopleInfoTransform = (people) => {
       return {
         id: this.extractId(people),
-        name: people.gender,
+        name: people.name,
         birthYear: people.birthYear,
         eyeColor: people.eyeColor
 
       }
     }
 
-    _starshipInfoTransform(starship){
+    _starshipInfoTransform = (starship) => {
       return {
         id: this.extractId(starship),
         name: starship.name,
