@@ -6,6 +6,12 @@ import './person-details.css'
 
 export default class PersonDetails extends Component {
 
+  swapiService = new SwapiServise()
+
+  state = {
+      person: null
+  
+    }
         <img className="person-image"
           src="https://starwars-visualguide.com/assets/img/characters/3.jpg" />
 
