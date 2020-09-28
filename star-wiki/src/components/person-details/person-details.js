@@ -21,6 +21,17 @@ export default class PersonDetails extends Component {
       this.updatePersone()
     }
   }
+  updatePersone() {
+    const {personId} = this.props
+    if(!personId){
+      return ;
+    }
+    this.swapiService
+      .getPersone(personId)
+      .then(person => {
+        this.setState({ person })
+      })
+  }
         <img className="person-image"
           src="https://starwars-visualguide.com/assets/img/characters/3.jpg" />
 
