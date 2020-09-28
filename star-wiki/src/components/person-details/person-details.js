@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Component }  from 'react'
+import SwapiServise from '../../servises/swapi-servises'
+import Spiner from '../spiner'
 import './person-details.css'
 
-export default function PersonDetails(){
 
-    return(
-        <div className="person-details card">
+export default class PersonDetails extends Component {
+
         <img className="person-image"
           src="https://starwars-visualguide.com/assets/img/characters/3.jpg" />
 
