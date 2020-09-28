@@ -12,6 +12,15 @@ export default class PersonDetails extends Component {
       person: null
   
     }
+  componentDidMount(){
+    this.updatePersone()
+  }
+
+  componentDidUpdate(prevProps){
+    if(this.props.personId !== prevProps.personId){
+      this.updatePersone()
+    }
+  }
         <img className="person-image"
           src="https://starwars-visualguide.com/assets/img/characters/3.jpg" />
 
