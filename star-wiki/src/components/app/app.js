@@ -2,22 +2,14 @@ import React, { Component } from 'react'
 
 import Header from '../header'
 import RandomPlanet from '../random-planet'
-import PersonDetails from '../person-details'
-import ListItem from '../list-item'
+
 
 import './app.css'
+import ErrorBtn from '../errorbtn'
+import PeoplePage from '../peoplePage'
 
 export default class App extends Component {
 
-    state = {
-        selectedPerson: 5
-    }
-
-    onPersonSelected = (id) => {
-        this.setState({
-            selectedPerson:id
-        })
-    }
 
     render(){
 
@@ -26,10 +18,10 @@ export default class App extends Component {
             <div className = "app">
                 <Header/>
                 <RandomPlanet/>
-                <div className = "star-list-wrap">
-                    <ListItem onItemSelected = {this.onPersonSelected}/>
-                    <PersonDetails personId  = {this.state.selectedPerson}/>
-                </div>
+                <ErrorBtn/>
+                <PeoplePage/>
+                <PeoplePage/>
+                <PeoplePage/>
             </div>
             </div>
         )
